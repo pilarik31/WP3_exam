@@ -32,27 +32,27 @@ if (!$evaluation && (empty($gender) || empty($age) || empty($job))) {
 }
 elseif (!$evaluation) {
     if (empty($firstname) && empty($lastname)) {
-        $result = sprintf("Pro tebe není povolání %s vhodné.", $job);
+        $result = sprintf("Pro tebe není povolání %s vhodné.", $fancyJobOutput);
     }
     elseif (empty($firstname)) {
-        $result = sprintf("Pro %s je povolání %s vhodné.", $firstname, $job);
+        $result = sprintf("Pro %s je povolání %s vhodné.", $firstname, $fancyJobOutput);
     }
     elseif (empty($surname)) {
-        $result = sprintf("Pro %s je povolání %s vhodné.", $surname, $job);
+        $result = sprintf("Pro %s je povolání %s vhodné.", $surname, $fancyJobOutput);
     }
-    $result = sprintf("Pro %s %s není povolání %s vhodné.", $firstname, $surname, $job);
+    $result = sprintf("Pro %s %s není povolání %s vhodné.", $firstname, $surname, $fancyJobOutput);
 }
 elseif ($evaluation) {
     if (empty($firstname) && empty($lastname)) {
-        $result = sprintf("Pro tebe je povolání %s vhodné.", $job);
+        $result = sprintf("Pro tebe je povolání %s vhodné.", $fancyJobOutput);
     }
     elseif (empty($firstname)) {
-        $result = sprintf("Pro %s je povolání %s vhodné.", $firstname, $job);
+        $result = sprintf("Pro %s je povolání %s vhodné.", $firstname, $fancyJobOutput);
     }
     elseif (empty($surname)) {
-        $result = sprintf("Pro %s je povolání %s vhodné.", $surname, $job);
+        $result = sprintf("Pro %s je povolání %s vhodné.", $surname, $fancyJobOutput);
     }
-    $result = sprintf("Pro %s %s je povolání %s vhodné.", $firstname, $surname, $job);
+    $result = sprintf("Pro %s %s je povolání %s vhodné.", $firstname, $surname, $fancyJobOutput);
 }
 
 #endregion
